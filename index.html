@@ -49,8 +49,6 @@
       color: inherit;
     }
 
-    /* 상단 메뉴 */
-
     header {
       position: sticky;
       top: 0;
@@ -63,7 +61,7 @@
 
     .header-inner {
       max-width: 1250px;
-      min-height: 82px;
+      min-height: 88px;
       margin: 0 auto;
       padding: 10px 30px;
       display: flex;
@@ -79,10 +77,23 @@
       text-decoration: none;
     }
 
-    .brand img {
-      width: 105px;
-      height: auto;
+    .brand-logo-box {
+      width: 120px;
+      height: 64px;
+      padding: 5px 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background-color: #ffffff;
+    }
+
+    .brand-logo-box img {
+      width: 100%;
+      height: 100%;
       display: block;
+      object-fit: contain;
     }
 
     .brand-text strong {
@@ -132,8 +143,6 @@
     nav a:hover::after {
       width: 100%;
     }
-
-    /* 메인 화면 */
 
     .hero {
       position: relative;
@@ -213,8 +222,6 @@
       background-color: var(--dku-light-blue);
     }
 
-    /* 공통 영역 */
-
     .section {
       max-width: 1180px;
       margin: 0 auto;
@@ -247,8 +254,6 @@
       color: var(--gray);
     }
 
-    /* 실험실 소개 */
-
     .about-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -273,8 +278,6 @@
     .about-card p + p {
       margin-top: 16px;
     }
-
-    /* 연구 분야 */
 
     .research-section {
       background-color: var(--light-gray);
@@ -319,8 +322,6 @@
     .research-card p {
       color: var(--gray);
     }
-
-    /* 연락처 */
 
     .contact-section {
       background:
@@ -397,8 +398,6 @@
       text-decoration: underline;
     }
 
-    /* 지도 */
-
     .map-box {
       overflow: hidden;
       border: 6px solid rgba(255, 255, 255, 0.25);
@@ -430,8 +429,6 @@
       text-decoration: underline;
     }
 
-    /* 하단 */
-
     footer {
       padding: 38px 20px;
       background-color: #08233f;
@@ -446,8 +443,6 @@
       color: var(--white);
       font-size: 16px;
     }
-
-    /* 모바일 */
 
     @media (max-width: 900px) {
       .header-inner {
@@ -484,8 +479,9 @@
     }
 
     @media (max-width: 600px) {
-      .brand img {
-        width: 80px;
+      .brand-logo-box {
+        width: 92px;
+        height: 52px;
       }
 
       .brand-text strong {
@@ -534,7 +530,9 @@
     <div class="header-inner">
 
       <a class="brand" href="#home">
-        <img src="dku-logo.png" alt="단국대학교 로고">
+        <div class="brand-logo-box">
+          <img src="./dku-logo.jpg" alt="단국대학교 로고">
+        </div>
 
         <div class="brand-text">
           <strong>식품·나노시스템공학 실험실</strong>
@@ -566,8 +564,8 @@
         <h2>Food·Nanosystems Engineering Laboratory</h2>
 
         <p>
-          식품·나노기술, 바이오센서 및 인공지능을 융합하여
-          식품 안전과 품질 관리를 위한 신속하고 정확한 분석 기술을 연구합니다.
+          나노물질 기반 바이오센서와 신속·조기진단 기술을 개발하여
+          식품 안전과 Food Security를 위한 분석 시스템을 연구합니다.
         </p>
 
         <a class="hero-button" href="#about">
@@ -584,8 +582,8 @@
           <span>ABOUT US</span>
           <h2>About Our Laboratory</h2>
           <p>
-            식품 안전성과 품질을 효과적으로 평가할 수 있는
-            차세대 식품 분석 기술을 연구합니다.
+            나노기술과 바이오센서 기술을 기반으로 식품 안전과
+            신속진단을 위한 차세대 분석 시스템을 연구합니다.
           </p>
         </div>
 
@@ -595,15 +593,14 @@
             <h3>실험실 소개</h3>
 
             <p>
-              식품·나노시스템공학 실험실은 나노소재, 바이오센서 및
-              인공지능 기반 분석 기술을 융합하여 식품 안전성과 품질을
-              신속하고 정확하게 평가할 수 있는 기술을 연구합니다.
+              식품·나노시스템공학 실험실은 나노물질을 활용하여
+              유해요소 및 기능성 물질 검출을 위한 바이오센서를 개발합니다.
             </p>
 
             <p>
-              특히 금 나노입자 기반 비색 바이오센서, 식품 위해요소 검출,
-              스마트폰 기반 신호 분석, 머신러닝을 이용한 센서 데이터 해석 및
-              식품 품질 평가에 관한 연구를 수행하고 있습니다.
+              또한 신속진단을 위한 검출 민감도 제어 기술과 조기진단 방법을
+              활용하여 식품 안전과 안정적인 공급을 지원하는
+              Food Security 시스템 개발 등의 연구를 수행하고 있습니다.
             </p>
           </article>
 
@@ -612,16 +609,15 @@
 
             <p>
               The Food·Nanosystems Engineering Laboratory develops
-              advanced analytical technologies for the rapid and accurate
-              assessment of food safety and quality by integrating
-              nanomaterials, biosensors, and artificial intelligence.
+              biosensors for the detection of hazardous factors and
+              functional compounds using nanomaterials.
             </p>
 
             <p>
-              Our research focuses on gold nanoparticle-based colorimetric
-              biosensors, detection of foodborne hazards, smartphone-based
-              signal analysis, machine learning-assisted biosensor
-              interpretation, and intelligent food quality assessment.
+              Our research also focuses on controlling detection sensitivity
+              for rapid diagnosis, applying early detection methods, and
+              developing food security systems that support food safety and
+              a stable food supply.
             </p>
           </article>
 
@@ -646,7 +642,7 @@
             <div class="research-number">01</div>
             <h3>Food Biosensors</h3>
             <p>
-              식품 중 미생물, 유해물질 및 품질 지표를 신속하게 검출하기 위한
+              식품 중 유해요소와 기능성 물질을 신속하게 검출하기 위한
               비색, 광학 및 전기화학 기반 바이오센서 기술을 개발합니다.
             </p>
           </article>
@@ -662,10 +658,10 @@
 
           <article class="research-card">
             <div class="research-number">03</div>
-            <h3>AI & Machine Learning</h3>
+            <h3>Rapid & Early Diagnosis</h3>
             <p>
-              머신러닝, 딥러닝 및 영상 분석을 활용하여 센서 신호의 해석,
-              판별 정확도 및 현장 적용성을 향상시키는 연구를 수행합니다.
+              검출 민감도 제어와 조기진단 방법을 활용하여 신속하고
+              정확한 식품 안전 진단 시스템을 개발합니다.
             </p>
           </article>
 
@@ -771,8 +767,8 @@
         <div class="map-box">
 
           <iframe
-            title="단국대학교 천안캠퍼스 위치"
-            src="https://www.google.com/maps?q=단국대학교+천안캠퍼스+충남+천안시+동남구+단대로+119&output=embed"
+            title="단국대학교 천안캠퍼스 공학관 위치"
+            src="https://www.google.com/maps?q=단국대학교+천안캠퍼스+공학관&output=embed"
             loading="lazy"
             allowfullscreen
             referrerpolicy="no-referrer-when-downgrade">
@@ -783,7 +779,7 @@
               href="https://maps.app.goo.gl/obGZvCjWVtRnYGpY9"
               target="_blank"
               rel="noopener noreferrer">
-              Google Maps에서 크게 보기
+              Google Maps에서 단국대학교 공학관 위치 보기
             </a>
           </div>
 
